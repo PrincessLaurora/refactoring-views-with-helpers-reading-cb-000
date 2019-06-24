@@ -8,6 +8,6 @@ class AuthorsController < ApplicationController
   end
 
   def index
-		@authors = Authors.all
+		@authors = Author.all
 	end
 end
