@@ -554,3 +554,14 @@ Processing by PostsController#show as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 93.41.127.250 at 2019-06-24 10:29:53 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zz7/ZxLzgLXQKPrcwE3PKu7RADLBS5rkc8Jth+LX77ZQDGRo7QWKSdqwUb2BKY7FVcRXmxxWNCSGRJHazdd2tQ==", "post"=>{"title"=>"OnePunch", "description"=>"Maaaaaaan"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "One Punch"], ["description", "Maaaaaaan"], ["created_at", "2019-06-24 10:29:53.435804"], ["updated_at", "2019-06-24 10:29:53.435804"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://178.128.207.152:51718/posts/3
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
