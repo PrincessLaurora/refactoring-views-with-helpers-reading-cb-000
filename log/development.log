@@ -517,3 +517,31 @@ Processing by PostsController#show as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 93.41.127.250 at 2019-06-24 10:29:28 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2/edit" for 93.41.127.250 at 2019-06-24 10:29:33 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/2" for 93.41.127.250 at 2019-06-24 10:29:42 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RnVuu9BmRV4DxU9nvki16KCAERMk6dzMW3tNCANWjLXZR/W0L5BPogld5Ab/LPQHG5VGuvn0cgyu/bFVLFYVtg==", "post"=>{"title"=>"Pen Pen", "description"=>"È un bravo pinguino"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "È un bravo pinguino"], ["updated_at", "2019-06-24 10:29:42.131252"], ["id", 2]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://178.128.207.152:51718/posts/2
+Completed 302 Found in 7ms (ActiveRecord: 4.6ms)
