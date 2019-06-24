@@ -876,3 +876,23 @@ Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 93.41.127.250 at 2019-06-24 10:50:23 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OxkYChvNZAV840b+tWRzZCMgjxpKoWHuB4P56gkbkqWkK4MF5Dtu+XZ77Z/0ADKLmDXYs5e8zy7yBQW3JhsLpg==", "post"=>{"title"=>"Billikku", "description"=>"Esti unu turmentu\r\n"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Billikku"], ["description", "Esti unu turmentu\r\n"], ["created_at", "2019-06-24 10:50:23.898046"], ["updated_at", "2019-06-24 10:50:23.898046"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://178.128.207.152:51718/posts/5
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/5" for 93.41.127.250 at 2019-06-24 10:50:23 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
