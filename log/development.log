@@ -545,3 +545,12 @@ Processing by PostsController#update as HTML
   [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://178.128.207.152:51718/posts/2
 Completed 302 Found in 7ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/posts/2" for 93.41.127.250 at 2019-06-24 10:29:42 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
